@@ -7,8 +7,9 @@ from telegram.ext import Application, MessageHandler, CommandHandler, ContextTyp
 from groq import Groq
 from PIL import Image
 
-TELEGRAM_BOT_TOKEN = "TELEGRAM_BOT_TOKEN"
-GROQ_API_KEY = "API_KEY"
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+GROQ_API_KEY = os.environ.get('API_KEY')
+
 MODEL_ID = "meta-llama/llama-4-scout-17b-16e-instruct"
 
 SYSTEM_PROMPT = (
@@ -107,3 +108,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
