@@ -3,8 +3,8 @@ import requests
 from telegram import Update
 from telegram.ext import Application, MessageHandler, CommandHandler, ContextTypes, filters
 
-TELEGRAM_BOT_TOKEN = "8250016606:AAGkHjhD6JlmgfQeHYJHN8tSx8MusENX970"
-OPENROUTER_API_KEY = "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"
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY')
 
 MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
@@ -118,3 +118,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
