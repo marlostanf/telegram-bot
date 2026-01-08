@@ -1,5 +1,7 @@
 import asyncio
 import io
+import os
+import requests
 import base64
 from telegram import Update
 from telegram.constants import ChatAction
@@ -108,4 +110,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
